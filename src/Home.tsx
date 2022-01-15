@@ -438,42 +438,25 @@ const Home = (props: HomeProps) => {
         <main>
             <MainContainer>
                 <WalletContainer>
-                    <Logo><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer"><img alt="" src="logo.png"/></a></Logo>
-                    <Menu>
-                        <li><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer">Menu 1</a>
-                        </li>
-                        <li><a href="http://localhost:3000/" target="_blank"
-                               rel="noopener noreferrer">Menu 2</a></li>
-                        <li><a href="http://localhost:3000/" target="_blank"
-                               rel="noopener noreferrer">Menu 3</a></li>
-                    </Menu>
+                    <Logo><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer"><img alt="" src=""/></a></Logo>
                     <Wallet>
                         {wallet ?
                             <WalletAmount>{(balance || 0).toLocaleString()} SOL<ConnectButton/></WalletAmount> :
                             <ConnectButton>Connect Wallet</ConnectButton>}
                     </Wallet>
                 </WalletContainer>
-                <ShimmerTitle>MINT IS LIVE !</ShimmerTitle>
+                <ShimmerTitle>Welcome To The Goat Gang Mint!</ShimmerTitle>
                 <br/>
 
 
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>My NFT</h2>
+                            <h2>The Collection</h2>
                             <br/>
                             <div><Price label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " SOL") : (price + " SOL")}/><Image
-                                src="cool-cats.gif"
+                                src="cool-goats.gif"
                                 alt="NFT To Mint"/></div>
-                            <br/>
-                            {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) &&
-                              <h3>You have {whitelistTokenBalance} whitelist mint(s) remaining.</h3>}
-                            {wallet && isActive &&
-                                /* <p>Total Minted : {100 - (itemsRemaining * 100 / itemsAvailable)}%</p>}*/
-                              <h3>TOTAL MINTED : {itemsRedeemed} / {itemsAvailable}</h3>}
-                            {wallet && isActive && <BorderLinearProgress variant="determinate"
-                                                                         value={100 - (itemsRemaining * 100 / itemsAvailable)}/>}
-                            <br/>
                             <MintButtonContainer>
                                 {!isActive && candyMachine?.state.goLiveDate ? (
                                     <Countdown
@@ -532,32 +515,22 @@ const Home = (props: HomeProps) => {
                         </NFT>
                     </DesContainer>
                     <DesContainer>
-                        <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 1</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
+                    <Des elevation={1}>
+                            <LogoAligner><img src="Goats.png" alt=""></img><GoldTitle>Join The Gang!</GoldTitle></LogoAligner>
+                            <p> Be part of an exclusive club of goats venturing forth on a mission to take over the metaverse. Baaahh!</p>
+
                         </Des>
                         <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 2</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
+                            <LogoAligner><img src="goat-gang.png" alt=""></img><GoldTitle>The Roadmap!</GoldTitle></LogoAligner>
+                            <p>1) Develop $GMILK which will be given to goats that staked in the barn</p>
+                            <p>2) Use $GMILK to mutate your goat into a super mutant goat that recieves more $GMILK</p>
+                            <p>3) Build out our brand and give back to the community through merch and collabs!</p>
+                            <p>4) Enter all verses! The goats will be buying land in the sandbox and decentraland to build a goat club for holders</p>
                         </Des>
-                        <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 3</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
+                        <Des elevation={3}>
+                            <LogoAligner><img src="goat-gang.png" alt=""></img><GoldTitle>Goat Disclaimer!</GoldTitle></LogoAligner>
+                            <p>Baaahh Baaahh Baaahh!</p>
+
                         </Des>
                     </DesContainer>
                 </MintContainer>
